@@ -1,4 +1,4 @@
-## java-sandbox-gradle
+## java-sandbox
 
 A java sandbox application with gradle build system.
 
