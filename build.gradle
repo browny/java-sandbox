@@ -4,14 +4,6 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
-
-eclipse {
-	jdt {
-		sourceCompatibility = 1.8
-		targetCompatibility = 1.8
-	}
-}
 
 repositories {
 	mavenCentral()
@@ -40,17 +32,4 @@ test {
 		showStandardStreams = true
 		exceptionFormat = 'full'
 	}
-}
-
-task "create-dirs" << {
-	sourceSets*.java.srcDirs*.each { it.mkdirs() }
-	sourceSets*.resources.srcDirs*.each { it.mkdirs() }
-}
-
-task testCacheSuite(type: Test) {
-	systemProperty 'logback.configurationFile', 'logback.xml'
-}
-
-task showMeCache << {
-	configurations.compile.each { println it }
 }
