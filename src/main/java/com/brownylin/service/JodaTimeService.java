@@ -1,4 +1,4 @@
-package com.brownylin.service.time;
+package com.brownylin.service;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
